@@ -6,13 +6,28 @@
 Задание: переписать код используя как минимум 1 функцию
 """
 
-year = input('Ввведите год рождения А.С.Пушкина:')
-while year != '1799':
-    print("Не верно")
-    year = input('Ввведите год рождения А.С.Пушкина:')
+# year = input('Ввведите год рождения А.С.Пушкина:')
+# while year != '1799':
+#     print("Не верно")
+#     year = input('Ввведите год рождения А.С.Пушкина:')
+#
+# day = input('Ввведите день рождения Пушкина')
+# while day != '6':
+#     print("Не верно")
+#     day = input('В какой день июня родился Пушкин?')
+# print('Верно')
 
-day = input('Ввведите день рождения Пушкин?')
-while day != '6':
-    print("Не верно")
-    day = input('В какой день июня родился Пушкин?')
-print('Верно')
+def check_answer(prompt, correct_answer):
+    answer = input(prompt)
+    while answer != correct_answer:
+        print("Не верно")
+        answer = input(prompt)
+
+
+def main():
+    check_answer('Введите год рождения А.С. Пушкина: ', '1799')
+    check_answer('Введите день рождения Пушкина: ', '6')
+    print('Верно')
+
+
+main()
